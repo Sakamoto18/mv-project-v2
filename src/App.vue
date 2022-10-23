@@ -10,7 +10,7 @@
       <el-carousel-item v-for="item in 4" :key="item">
       </el-carousel-item>
       <div class="name-card-content">
-        <el-avatar :size="150" :src="circleUrl" />
+        <el-avatar :size="120" :src="circleUrl" />
         <HelloWorld msg="my-project-v2" />
       </div>
     </el-carousel>
@@ -21,6 +21,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import img from './assets/avatar.jpg'
 import { defineComponent, ref } from 'vue'
 
 
@@ -29,7 +30,8 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
-    const circleUrl = ref<String>('https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png')
+    const circleUrl = ref<String>('')
+    circleUrl.value = img
     return {
       circleUrl
     }
